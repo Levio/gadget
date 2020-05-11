@@ -1,0 +1,128 @@
+// @randomx: `parseInt((Math.random() + 1) * 300) `;
+@random: `parseInt(Math.random() * 80) `;
+.container {
+  width: 217px;
+  height: 317px;
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  //   transform: translate((@randomx) px; 100px) rotate(40deg);
+  transition: all 1.5s;
+  z-index: @random;
+}
+
+.front {
+  height: 100%;
+  width: 100%;
+  background: url('../../assets/timg.jpg');
+  background-size: 100% 100%;
+  backface-visibility: hidden;
+  position: relative;
+  transform: rotateY(0deg);
+  z-index: 2;
+}
+
+.backend {
+  padding: 20px;
+  background: url('../../assets/front.jpg');
+  background-size: 100% 100%;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  transform: rotateY(180deg);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0);
+  transition: color 1.5s linear 3s;
+}
+
+.checked {
+  //   transform: translate(-50%, -85%) rotate(0deg) !important;
+  //   z-index: 99;
+  .front {
+    animation: roll 1.5s ease-in-out 1.5s 1 forwards;
+  }
+  .backend {
+    animation: roll1 1.5s ease-in-out 1.5s 1 forwards;
+    color: rgb(255, 255, 255);
+  }
+}
+
+@keyframes roll {
+  0% {
+    transform: rotateY(0deg);
+  }
+  10% {
+    transform: rotateY(-180deg);
+  }
+  20% {
+    transform: rotateY(0deg);
+  }
+  30% {
+    transform: rotateY(-180deg);
+  }
+  40% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(-180deg);
+  }
+  60% {
+    transform: rotateY(0deg);
+  }
+  70% {
+    transform: rotateY(-180deg);
+  }
+  80% {
+    transform: rotateY(0deg);
+  }
+  90% {
+    transform: rotateY(-90deg);
+  }
+  100% {
+    transform: rotateY(-180deg);
+  }
+}
+
+@keyframes roll1 {
+  0% {
+    transform: rotateY(180deg);
+  }
+  10% {
+    transform: rotateY(0deg);
+  }
+  20% {
+    transform: rotateY(180deg);
+  }
+  30% {
+    transform: rotateY(0deg);
+  }
+  40% {
+    transform: rotateY(180deg);
+  }
+  50% {
+    transform: rotateY(0deg);
+  }
+  60% {
+    transform: rotateY(180deg);
+  }
+  70% {
+    transform: rotateY(0deg);
+  }
+  80% {
+    transform: rotateY(180deg);
+  }
+  90% {
+    transform: rotateY(90deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
