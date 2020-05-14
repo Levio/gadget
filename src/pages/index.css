@@ -14,3 +14,10 @@
   color: #df925faf;
   left: 50px;
 }
+
+@media screen and (max-width: 800px) {
+  .title {
+    font-size: 16px;
+    left: 0px;
+  }
+}
