@@ -4,7 +4,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transition: all 1.5s;
+  transition: all 0.5s;
 }
 
 .front {
@@ -37,17 +37,17 @@
   align-items: center;
   font-weight: bold;
   color: rgba(255, 255, 255, 0);
-  transition: color 1.5s linear 3s;
+  transition: color 1s linear 1s;
 }
 
 .checked {
   //   transform: translate(-50%, -85%) rotate(0deg) !important;
   //   z-index: 99;
   .front {
-    animation: roll 1.5s ease-in-out 1.5s 1 forwards;
+    animation: roll 0.5s ease-in-out 0.5s 1 forwards;
   }
   .backend {
-    animation: roll1 1.5s ease-in-out 1.5s 1 forwards;
+    animation: roll1 0.5s ease-in-out 0.5s 1 forwards;
     color: rgb(255, 255, 255);
   }
 }
@@ -56,25 +56,25 @@
   0% {
     transform: rotateY(0deg);
   }
-  10% {
-    transform: rotateY(-180deg);
-  }
   20% {
-    transform: rotateY(0deg);
-  }
-  30% {
     transform: rotateY(-180deg);
   }
+  // 20% {
+  //   transform: rotateY(0deg);
+  // }
+  // 30% {
+  //   transform: rotateY(-180deg);
+  // }
+  // 40% {
+  //   transform: rotateY(0deg);
+  // }
+  // 50% {
+  //   transform: rotateY(-180deg);
+  // }
   40% {
     transform: rotateY(0deg);
   }
-  50% {
-    transform: rotateY(-180deg);
-  }
   60% {
-    transform: rotateY(0deg);
-  }
-  70% {
     transform: rotateY(-180deg);
   }
   80% {
@@ -92,25 +92,25 @@
   0% {
     transform: rotateY(180deg);
   }
-  10% {
-    transform: rotateY(0deg);
-  }
   20% {
-    transform: rotateY(180deg);
-  }
-  30% {
     transform: rotateY(0deg);
   }
+  // 20% {
+  //   transform: rotateY(180deg);
+  // }
+  // 30% {
+  //   transform: rotateY(0deg);
+  // }
+  // 40% {
+  //   transform: rotateY(180deg);
+  // }
+  // 50% {
+  //   transform: rotateY(0deg);
+  // }
   40% {
     transform: rotateY(180deg);
   }
-  50% {
-    transform: rotateY(0deg);
-  }
   60% {
-    transform: rotateY(180deg);
-  }
-  70% {
     transform: rotateY(0deg);
   }
   80% {
