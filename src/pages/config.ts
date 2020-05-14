@@ -1,8 +1,8 @@
 const clientWidth = document.body.clientWidth;
-const moveX = clientWidth < 800 ? clientWidth - 200 : 1000;
+const moveX = clientWidth < 800 ? clientWidth - 200 : clientWidth - 400;
 
 const moveY = clientWidth < 800 ? 200 : 100;
-const rate = clientWidth < 800 ? 0.8 : 0.5;
+const rate = clientWidth < 800 ? 0.8 : 0.6;
 export const data = [
   {
     key: 0,
@@ -95,6 +95,22 @@ export const data = [
   {
     key: 11,
     name: '海康新界(重新抽吧)',
+    x: (Math.random() - rate) * moveX,
+    y: Math.random() * 50 - 25,
+    z: Math.round(Math.random() * 90),
+    deg: Math.random() * 180,
+  },
+  {
+    key: 12,
+    name: '兰州拉面',
+    x: (Math.random() - rate) * moveX,
+    y: Math.random() * 50 - 25,
+    z: Math.round(Math.random() * 90),
+    deg: Math.random() * 180,
+  },
+  {
+    key: 13,
+    name: '全家',
     x: (Math.random() - rate) * moveX,
     y: Math.random() * 50 - 25,
     z: Math.round(Math.random() * 90),
